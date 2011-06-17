@@ -1,0 +1,140 @@
+format-version: 1.2
+date: 09:02:2011 14:50
+saved-by: jestill
+auto-generated-by: OBO-Edit 2.1-beta4
+
+[Term]
+id: TRON:0000000
+name: reconciled_tree
+created_by: jestill
+creation_date: 2011-02-09T01:22:50Z
+
+[Term]
+id: TRON:0000001
+name: node
+relationship: OBO TRON:0000000 ! reconciled_tree
+created_by: jestill
+creation_date: 2011-02-09T01:23:26Z
+
+[Term]
+id: TRON:0000002
+name: edge
+relationship: OBO TRON:0000000 ! reconciled_tree
+created_by: jestill
+creation_date: 2011-02-09T01:27:41Z
+
+[Term]
+id: TRON:0000003
+name: host_edge
+is_a: TRON:0000002 ! edge
+created_by: jestill
+creation_date: 2011-02-09T01:28:22Z
+
+[Term]
+id: TRON:0000004
+name: guest_edge
+is_a: TRON:0000002 ! edge
+created_by: jestill
+creation_date: 2011-02-09T01:28:33Z
+
+[Term]
+id: TRON:0000005
+name: guest_node
+is_a: TRON:0000001 ! node
+created_by: jestill
+creation_date: 2011-02-09T01:32:11Z
+
+[Term]
+id: TRON:0000006
+name: host_node
+is_a: TRON:0000001 ! node
+created_by: jestill
+creation_date: 2011-02-09T01:32:23Z
+
+[Term]
+id: TRON:0000007
+name: leaf_node
+is_a: TRON:0000001 ! node
+created_by: jestill
+creation_date: 2011-02-09T01:48:15Z
+
+[Term]
+id: TRON:0000008
+name: bifurcation
+created_by: jestill
+creation_date: 2011-02-09T01:49:04Z
+
+[Term]
+id: TRON:0000009
+name: duplication
+is_a: TRON:0000008 ! bifurcation
+created_by: jestill
+creation_date: 2011-02-09T01:54:32Z
+
+[Term]
+id: TRON:0000010
+name: speciation
+is_a: TRON:0000008 ! bifurcation
+created_by: jestill
+creation_date: 2011-02-09T01:54:44Z
+
+[Term]
+id: TRON:0000011
+name: whole_genome_duplication
+is_a: TRON:0000009 ! duplication
+created_by: jestill
+creation_date: 2011-02-09T02:01:15Z
+
+[Term]
+id: TRON:0000012
+name: segmental_duplication
+is_a: TRON:0000009 ! duplication
+created_by: jestill
+creation_date: 2011-02-09T02:01:30Z
+
+[Term]
+id: TRON:0000013
+name: interchromosomal_segmental_duplication
+is_a: TRON:0000012 ! segmental_duplication
+created_by: jestill
+creation_date: 2011-02-09T02:03:44Z
+
+[Term]
+id: TRON:0000014
+name: intrachromosomal_segmental_duplication
+is_a: TRON:0000012 ! segmental_duplication
+created_by: jestill
+creation_date: 2011-02-09T02:06:50Z
+
+[Term]
+id: TRON:0000015
+name: loss
+created_by: jestill
+creation_date: 2011-02-09T02:06:59Z
+
+[Term]
+id: TRON:0000016
+name: horizontal_transfer
+created_by: jestill
+creation_date: 2011-02-09T02:07:32Z
+
+[Term]
+id: TRON:0000017
+name: holochromosomal_duplication
+is_a: TRON:0000012 ! segmental_duplication
+created_by: jestill
+creation_date: 2011-02-09T02:25:48Z
+
+[Term]
+id: TRON:0000018
+name: tandem_duplication
+is_a: TRON:0000009 ! duplication
+created_by: jestill
+creation_date: 2011-02-09T02:34:50Z
+
+[Typedef]
+id: OBO
+name: part_of
+created_by: jestill
+creation_date: 2011-02-09T01:23:50Z
+
