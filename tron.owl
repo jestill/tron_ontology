@@ -43,6 +43,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <owl:AnnotationProperty rdf:about="&dc;type"/>
     <owl:AnnotationProperty rdf:about="&dc;description"/>
     <owl:AnnotationProperty rdf:about="&dc;creator"/>
     
@@ -138,6 +139,14 @@
 
     <owl:Class rdf:about="#FORESTER">
         <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#Forester -->
+
+    <owl:Class rdf:about="#Forester">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_visualization_software"/>
     </owl:Class>
     
 
@@ -311,6 +320,8 @@
     <!-- http://purl.org/phylo/tron/1.0/tron.owl#computational_model -->
 
     <owl:Class rdf:about="#computational_model">
+        <rdfs:comment
+            >Ideally this will be expressed in a transferable format like MathML.</rdfs:comment>
         <dc:description
             >The mathematical model used to generate a reconciliation. In reconciliation analyses a mathematical may used to determine the &#39;fitness&#39; of a given solution given a set of parameter values for a model in a parsimony approach or may ____ in Bayesian or maximum likelihood approaches.</dc:description>
     </owl:Class>
@@ -356,6 +367,16 @@
     
 
 
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#duplication_cost -->
+
+    <owl:Class rdf:about="#duplication_cost">
+        <rdfs:subClassOf rdf:resource="#computational_model_parameter"/>
+        <dc:description
+            >The cost of duplication </dc:description>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/phylo/tron/1.0/tron.owl#dynamic_programming_algorithm -->
 
     <owl:Class rdf:about="#dynamic_programming_algorithm">
@@ -367,14 +388,6 @@
     <!-- http://purl.org/phylo/tron/1.0/tron.owl#edge -->
 
     <owl:Class rdf:about="#edge"/>
-    
-
-
-    <!-- http://purl.org/phylo/tron/1.0/tron.owl#gamma -->
-
-    <owl:Class rdf:about="#gamma">
-        <rdfs:subClassOf rdf:resource="#computational_model_parameter"/>
-    </owl:Class>
     
 
 
@@ -492,6 +505,16 @@
     
 
 
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#loss_cost -->
+
+    <owl:Class rdf:about="#loss_cost">
+        <rdfs:subClassOf rdf:resource="#computational_model_parameter"/>
+        <dc:type rdf:datatype="&xsd;float"
+            >The cost of a loss event in a computational model.</dc:type>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/phylo/tron/1.0/tron.owl#maximum_likelihood -->
 
     <owl:Class rdf:about="#maximum_likelihood">
@@ -555,6 +578,18 @@
 
     <owl:Class rdf:about="#speciation">
         <rdfs:subClassOf rdf:resource="#vertical_transfer"/>
+        <dc:description
+            >In a reconciled tree speciation events are a co-occurence of a multiplication in the guest tree and a multiplication in the host tree. For genes this represents the case where a node in the gene tree tree occurs on a node in the species tree.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#speciation_cost -->
+
+    <owl:Class rdf:about="#speciation_cost">
+        <rdfs:subClassOf rdf:resource="#computational_model_parameter"/>
+        <dc:description
+            >The cost of speciation in a model.</dc:description>
     </owl:Class>
     
 
