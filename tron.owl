@@ -27,10 +27,10 @@
         <dc:creator
             >Estill, James C.</dc:creator>
         <owl:versionInfo>1.0 Beta</owl:versionInfo>
-        <rdfs:comment xml:lang="en"
-            >This iontology is a beta project that is subject to large changes. Make no assumptions that future versions of this beta ontology will be backwards compatible with this current version. Use at your own risk.</rdfs:comment>
         <dc:creator
             >iPlant Collaborative</dc:creator>
+        <rdfs:comment xml:lang="en"
+            >This ontology is a beta project that is subject to large changes. Make no assumptions that future versions of this beta ontology will be backwards compatible with this current version. Use at your own risk.</rdfs:comment>
     </owl:Ontology>
     
 
@@ -166,6 +166,8 @@
 
     <owl:Class rdf:about="#GIGA_algorithm">
         <rdfs:subClassOf rdf:resource="#algorithm"/>
+        <rdfs:comment
+            >Thomas, P. D. (2010). GIGA: a simple, efficient algorithm for gene tree inference in the genomic age. BMC bioinformatics, 11(1), 312. Retrieved from http://www.biomedcentral.com/1471-2105/11/312</rdfs:comment>
     </owl:Class>
     
 
@@ -176,7 +178,7 @@
         <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
         <rdfs:subClassOf rdf:resource="#cophylogeny_visualization_software"/>
         <dc:description
-            >The Jane software tool uses a polynomial time dynamic programming algorithm in conjunction with a genetic algorithm to find very good, and often optimal, solutions even for relatively large pairs of trees. The tool allows the user to provide rich timing information on both the host and parasite trees. In addition the user can limit host switch distance and specify multiple host switch costs by specifying regions in the host tree and costs for host switches between pairs of regions. Jane also provides a graphical user interface that allows the user to interactively experiment with modifications to the solutions found by the program. </dc:description>
+            >The Jane software tool uses a polynomial time dynamic programming algorithm in conjunction with a genetic algorithm to find very good, and often optimal, solutions even for relatively large pairs of trees. The tool allows the user to provide rich timing information on both the host and parasite trees. In addition the user can limit host switch distance and specify multiple host switch costs by specifying regions in the host tree and costs for host switches between pairs of regions. Jane also provides a graphical user interface that allows the user to interactively experiment with modifications to the solutions found by the program.</dc:description>
         <dc:creator>Fielder, Daniel</dc:creator>
         <dc:creator
             >Libeskind-Hadas, Ran</dc:creator>
@@ -234,10 +236,41 @@
     
 
 
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#RIATA-HGT -->
+
+    <owl:Class rdf:about="#RIATA-HGT">
+        <rdfs:subClassOf rdf:resource="#heuristic"/>
+        <rdfs:comment
+            >Nakhleh, L., Ruths, D., &amp; Wang, L.-S. (2005). RIATA-HGT : A Fast and Accurate Heuristic for Reconstructing Horizontal Gene Transfer. (L. Wang, Ed.)Gene, 3595(2), 84-93. Springer. doi:10.1007/11533719_11</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#SDI_algorithm -->
+
+    <owl:Class rdf:about="#SDI_algorithm">
+        <rdfs:subClassOf rdf:resource="#algorithm"/>
+        <rdfs:comment
+            >Zmasek, C. M. (2001). A simple algorithm to infer gene duplication and speciation events on a gene tree. Bioinformatics, 17(9), 821-828.</rdfs:comment>
+        <dc:creator>Zmasek, C. M.</dc:creator>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/phylo/tron/1.0/tron.owl#SPIMAP -->
 
     <owl:Class rdf:about="#SPIMAP">
         <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#SYNERGY_algorithm -->
+
+    <owl:Class rdf:about="#SYNERGY_algorithm">
+        <rdfs:subClassOf rdf:resource="#algorithm"/>
+        <rdfs:comment
+            >Wapinski, I., Pfeffer, A., Friedman, N., &amp; Regev, A. (2007). Automatic genome-wide reconstruction of phylogenetic gene trees. Bioinformatics (Oxford, England), 23(13), i549-58.</rdfs:comment>
     </owl:Class>
     
 
@@ -302,6 +335,7 @@
     <!-- http://purl.org/phylo/tron/1.0/tron.owl#computational_approach -->
 
     <owl:Class rdf:about="#computational_approach">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <dc:description
             >Generally a computational approach is the computational method used to search for a best fit of a computational model for a given vector of paramters for that model.</dc:description>
     </owl:Class>
@@ -311,6 +345,7 @@
     <!-- http://purl.org/phylo/tron/1.0/tron.owl#computational_inference_method -->
 
     <owl:Class rdf:about="#computational_inference_method">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <dc:description
             >A general classification of the methodolical approach used to generate the inference of the reconciliation.</dc:description>
     </owl:Class>
@@ -320,6 +355,7 @@
     <!-- http://purl.org/phylo/tron/1.0/tron.owl#computational_model -->
 
     <owl:Class rdf:about="#computational_model">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:comment
             >Ideally this will be expressed in a transferable format like MathML.</rdfs:comment>
         <dc:description
@@ -331,6 +367,7 @@
     <!-- http://purl.org/phylo/tron/1.0/tron.owl#computational_model_parameter -->
 
     <owl:Class rdf:about="#computational_model_parameter">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <dc:description
             >A computational parameter is a parameter that contributes to the determination of a model. A mathematical model may have more than one parameter value used in the determination of the model, and the same parameter may be used in multiple computational models</dc:description>
     </owl:Class>
@@ -372,7 +409,7 @@
     <owl:Class rdf:about="#duplication_cost">
         <rdfs:subClassOf rdf:resource="#computational_model_parameter"/>
         <dc:description
-            >The cost of duplication </dc:description>
+            >The cost of duplication</dc:description>
     </owl:Class>
     
 
@@ -387,7 +424,9 @@
 
     <!-- http://purl.org/phylo/tron/1.0/tron.owl#edge -->
 
-    <owl:Class rdf:about="#edge"/>
+    <owl:Class rdf:about="#edge">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
     
 
 
@@ -403,6 +442,7 @@
 
     <owl:Class rdf:about="#guest_edge">
         <rdfs:subClassOf rdf:resource="#edge"/>
+        <owl:disjointWith rdf:resource="#host_edge"/>
     </owl:Class>
     
 
@@ -411,6 +451,7 @@
 
     <owl:Class rdf:about="#guest_node">
         <rdfs:subClassOf rdf:resource="#node"/>
+        <owl:disjointWith rdf:resource="#host_node"/>
     </owl:Class>
     
 
@@ -495,6 +536,16 @@
     
 
 
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#lateral_transfer_cost -->
+
+    <owl:Class rdf:about="#lateral_transfer_cost">
+        <rdfs:subClassOf rdf:resource="#computational_model_parameter"/>
+        <rdfs:comment
+            >The lateral tranfer cost may also be referred to as a &#39;host switch&#39; cost.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/phylo/tron/1.0/tron.owl#loss -->
 
     <owl:Class rdf:about="#loss">
@@ -509,8 +560,6 @@
 
     <owl:Class rdf:about="#loss_cost">
         <rdfs:subClassOf rdf:resource="#computational_model_parameter"/>
-        <dc:type rdf:datatype="&xsd;float"
-            >The cost of a loss event in a computational model.</dc:type>
     </owl:Class>
     
 
@@ -542,6 +591,7 @@
     <!-- http://purl.org/phylo/tron/1.0/tron.owl#reconciled_tree -->
 
     <owl:Class rdf:about="#reconciled_tree">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <dc:description
             >A reconciled tree is a mapping of the nodes of a guest tree onto the nodes and edges of a host tree.</dc:description>
     </owl:Class>
@@ -551,6 +601,7 @@
     <!-- http://purl.org/phylo/tron/1.0/tron.owl#reconcilied_event -->
 
     <owl:Class rdf:about="#reconcilied_event">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <dc:description
             >A reconciled_event is the biological event inferred from the mapping of a node or pair of nodes from the guest tree onto the host tree.</dc:description>
     </owl:Class>
@@ -568,8 +619,19 @@
     <!-- http://purl.org/phylo/tron/1.0/tron.owl#software -->
 
     <owl:Class rdf:about="#software">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <dc:description
             >Software is a usable computational tool that can do work.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#sorting_cost -->
+
+    <owl:Class rdf:about="#sorting_cost">
+        <rdfs:subClassOf rdf:resource="#computational_model_parameter"/>
+        <rdfs:comment
+            >Sorting cost is used in models that consider lineage sorting as a distinct process from duplication/speciation and loss. For example, the Jungles approach uses a sorting cost.</rdfs:comment>
     </owl:Class>
     
 
@@ -621,6 +683,25 @@
     <!-- http://www.w3.org/2002/07/owl#Thing -->
 
     <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#lateral_transfer"/>
+            <rdf:Description rdf:about="#loss"/>
+            <rdf:Description rdf:about="#vertical_transfer"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 
