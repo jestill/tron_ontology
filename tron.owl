@@ -1,0 +1,594 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY tron "http://purl.org/phylo/tron/1.0/tron.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.org/phylo/tron/1.0/tron.owl#"
+     xml:base="http://purl.org/phylo/tron/1.0/tron.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:tron="http://purl.org/phylo/tron/1.0/tron.owl#">
+    <owl:Ontology rdf:about="">
+        <dc:creator
+            >Leebens-Mack, Jim</dc:creator>
+        <dc:creator
+            >Estill, James C.</dc:creator>
+        <owl:versionInfo>1.0 Beta</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >This iontology is a beta project that is subject to large changes. Make no assumptions that future versions of this beta ontology will be backwards compatible with this current version. Use at your own risk.</rdfs:comment>
+        <dc:creator
+            >iPlant Collaborative</dc:creator>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#has_parameter -->
+
+    <owl:ObjectProperty rdf:about="#has_parameter"/>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#uses_approach -->
+
+    <owl:ObjectProperty rdf:about="#uses_approach"/>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#uses_method -->
+
+    <owl:ObjectProperty rdf:about="#uses_method"/>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#uses_model -->
+
+    <owl:ObjectProperty rdf:about="#uses_model"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#Bayesian_inference -->
+
+    <owl:Class rdf:about="#Bayesian_inference">
+        <rdfs:subClassOf rdf:resource="#computational_inference_method"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#CoRe-PA -->
+
+    <owl:Class rdf:about="#CoRe-PA">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#DrML -->
+
+    <owl:Class rdf:about="#DrML">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#DupTree -->
+
+    <owl:Class rdf:about="#DupTree">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#EvolMap -->
+
+    <owl:Class rdf:about="#EvolMap">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#FORESTER -->
+
+    <owl:Class rdf:about="#FORESTER">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#GIGA -->
+
+    <owl:Class rdf:about="#GIGA">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+        <dc:creator>Thomas, Paul D</dc:creator>
+        <dc:description
+            >GIGA is a fast algorithm for inferring gene phylogenies, which makes use of information that was not available prior to the genomic age: namely, a reliable species tree spanning much of the tree of life, and knowledge of the complete complement of genes in a species&#39; genome. The algorithm constructs trees agglomeratively from a distance matrix representation of sequences, using simple rules to incorporate this genomic age information. GIGA makes use of a novel conceptualization of gene trees as being composed of orthologous subtrees (containing only speciation events), which are joined by other evolutionary events such as gene duplication or horizontal gene transfer. An important innovation in GIGA is that, at every step in the agglomeration process, the tree is interpreted/reinterpreted in terms of the evolutionary events that created it.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#GIGA_algorithm -->
+
+    <owl:Class rdf:about="#GIGA_algorithm">
+        <rdfs:subClassOf rdf:resource="#algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#Jane -->
+
+    <owl:Class rdf:about="#Jane">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+        <rdfs:subClassOf rdf:resource="#cophylogeny_visualization_software"/>
+        <dc:description
+            >The Jane software tool uses a polynomial time dynamic programming algorithm in conjunction with a genetic algorithm to find very good, and often optimal, solutions even for relatively large pairs of trees. The tool allows the user to provide rich timing information on both the host and parasite trees. In addition the user can limit host switch distance and specify multiple host switch costs by specifying regions in the host tree and costs for host switches between pairs of regions. Jane also provides a graphical user interface that allows the user to interactively experiment with modifications to the solutions found by the program. </dc:description>
+        <dc:creator>Fielder, Daniel</dc:creator>
+        <dc:creator
+            >Libeskind-Hadas, Ran</dc:creator>
+        <dc:creator>Ovadia, Yaniv</dc:creator>
+        <dc:creator>Conow, Chris</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#Mowgli -->
+
+    <owl:Class rdf:about="#Mowgli">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#Notung -->
+
+    <owl:Class rdf:about="#Notung">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#Phylodog -->
+
+    <owl:Class rdf:about="#Phylodog">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#PrIME-GSR -->
+
+    <owl:Class rdf:about="#PrIME-GSR">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#RAP -->
+
+    <owl:Class rdf:about="#RAP">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#RAP-Green -->
+
+    <owl:Class rdf:about="#RAP-Green">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#SPIMAP -->
+
+    <owl:Class rdf:about="#SPIMAP">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#Softparsmap -->
+
+    <owl:Class rdf:about="#Softparsmap">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#Tarzan -->
+
+    <owl:Class rdf:about="#Tarzan">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#TreeBeST -->
+
+    <owl:Class rdf:about="#TreeBeST">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#TreeFitter -->
+
+    <owl:Class rdf:about="#TreeFitter">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#TreeKO -->
+
+    <owl:Class rdf:about="#TreeKO">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#TreeMap -->
+
+    <owl:Class rdf:about="#TreeMap">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+        <rdfs:subClassOf rdf:resource="#cophylogeny_visualization_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#algorithm -->
+
+    <owl:Class rdf:about="#algorithm">
+        <rdfs:subClassOf rdf:resource="#computational_approach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#computational_approach -->
+
+    <owl:Class rdf:about="#computational_approach">
+        <dc:description
+            >Generally a computational approach is the computational method used to search for a best fit of a computational model for a given vector of paramters for that model.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#computational_inference_method -->
+
+    <owl:Class rdf:about="#computational_inference_method">
+        <dc:description
+            >A general classification of the methodolical approach used to generate the inference of the reconciliation.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#computational_model -->
+
+    <owl:Class rdf:about="#computational_model">
+        <dc:description
+            >The mathematical model used to generate a reconciliation. In reconciliation analyses a mathematical may used to determine the &#39;fitness&#39; of a given solution given a set of parameter values for a model in a parsimony approach or may ____ in Bayesian or maximum likelihood approaches.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#computational_model_parameter -->
+
+    <owl:Class rdf:about="#computational_model_parameter">
+        <dc:description
+            >A computational parameter is a parameter that contributes to the determination of a model. A mathematical model may have more than one parameter value used in the determination of the model, and the same parameter may be used in multiple computational models</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#cophylogeny_inference_software -->
+
+    <owl:Class rdf:about="#cophylogeny_inference_software">
+        <rdfs:subClassOf rdf:resource="#software"/>
+        <dc:description
+            >A cophylogeny_inference_software is software that makes inferences for a guest tree in the context of the evolutionary history of a host tree.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#cophylogeny_visualization_software -->
+
+    <owl:Class rdf:about="#cophylogeny_visualization_software">
+        <rdfs:subClassOf rdf:resource="#software"/>
+        <dc:description
+            >A cophylogeny_visualization_software is software that allows for visualization of the mapping of a guest tree onto a host tree.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#duplication -->
+
+    <owl:Class rdf:about="#duplication">
+        <rdfs:subClassOf rdf:resource="#vertical_transfer"/>
+        <dc:description
+            >the creation of multiple copies of a guest entity that does not correspond to a multiplication in the host tree. For genes this would be the duplication of a gene in an ancestral branch that does not correspond to a speciation node in the host tree.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#dynamic_programming_algorithm -->
+
+    <owl:Class rdf:about="#dynamic_programming_algorithm">
+        <rdfs:subClassOf rdf:resource="#algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#edge -->
+
+    <owl:Class rdf:about="#edge"/>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#gamma -->
+
+    <owl:Class rdf:about="#gamma">
+        <rdfs:subClassOf rdf:resource="#computational_model_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#genetic_algorithm -->
+
+    <owl:Class rdf:about="#genetic_algorithm">
+        <rdfs:subClassOf rdf:resource="#algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#guest_edge -->
+
+    <owl:Class rdf:about="#guest_edge">
+        <rdfs:subClassOf rdf:resource="#edge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#guest_node -->
+
+    <owl:Class rdf:about="#guest_node">
+        <rdfs:subClassOf rdf:resource="#node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#heuristic -->
+
+    <owl:Class rdf:about="#heuristic">
+        <rdfs:subClassOf rdf:resource="#computational_approach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#hierarchical_clustering -->
+
+    <owl:Class rdf:about="#hierarchical_clustering">
+        <rdfs:subClassOf rdf:resource="#computational_inference_method"/>
+        <dc:description
+            >Hierarchical clustering methods take a matrix of similarities as their input to iteratively reconstruct a single tree toplogy or the the topological mapping of the guest tree onto the species tree.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#holochromosomal_duplication -->
+
+    <owl:Class rdf:about="#holochromosomal_duplication">
+        <rdfs:subClassOf rdf:resource="#segmental_duplication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#host_edge -->
+
+    <owl:Class rdf:about="#host_edge">
+        <rdfs:subClassOf rdf:resource="#edge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#host_node -->
+
+    <owl:Class rdf:about="#host_node">
+        <rdfs:subClassOf rdf:resource="#node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#iGTP -->
+
+    <owl:Class rdf:about="#iGTP">
+        <rdfs:subClassOf rdf:resource="#cophylogeny_inference_software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#interchromosomal_segmental_duplication -->
+
+    <owl:Class rdf:about="#interchromosomal_segmental_duplication">
+        <rdfs:subClassOf rdf:resource="#segmental_duplication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#intrachromosomal_segmental_duplication -->
+
+    <owl:Class rdf:about="#intrachromosomal_segmental_duplication">
+        <rdfs:subClassOf rdf:resource="#segmental_duplication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#lateral_transfer -->
+
+    <owl:Class rdf:about="#lateral_transfer">
+        <rdfs:label
+            >horizontal_transfer</rdfs:label>
+        <rdfs:label
+            >lateral_transfer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#reconcilied_event"/>
+        <dc:description
+            >An event in which an organism incorporates genetic material from another organism without being the offspring of that organism. Topologically this would be illustrated in a reconciliation as an edge in a guest tree that is not constrained by the toplogy of the host tree and crosses from one node or branch in the host to to another node or branch in the host tree.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#loss -->
+
+    <owl:Class rdf:about="#loss">
+        <rdfs:subClassOf rdf:resource="#reconcilied_event"/>
+        <dc:description
+            >The loss of a guest entity from a host entity. Topologically this would be illustrated as an extinction of a guest branch of the guest tree withing the host tree. An example in gene tree/speciess tree reconciliation is loss of one copy of a duplicated gene after a whole genome duplication event.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#maximum_likelihood -->
+
+    <owl:Class rdf:about="#maximum_likelihood">
+        <rdfs:subClassOf rdf:resource="#computational_inference_method"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#node -->
+
+    <owl:Class rdf:about="#node">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#parsimony -->
+
+    <owl:Class rdf:about="#parsimony">
+        <rdfs:subClassOf rdf:resource="#computational_inference_method"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#reconciled_tree -->
+
+    <owl:Class rdf:about="#reconciled_tree">
+        <dc:description
+            >A reconciled tree is a mapping of the nodes of a guest tree onto the nodes and edges of a host tree.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#reconcilied_event -->
+
+    <owl:Class rdf:about="#reconcilied_event">
+        <dc:description
+            >A reconciled_event is the biological event inferred from the mapping of a node or pair of nodes from the guest tree onto the host tree.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#segmental_duplication -->
+
+    <owl:Class rdf:about="#segmental_duplication">
+        <rdfs:subClassOf rdf:resource="#duplication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#software -->
+
+    <owl:Class rdf:about="#software">
+        <dc:description
+            >Software is a usable computational tool that can do work.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#speciation -->
+
+    <owl:Class rdf:about="#speciation">
+        <rdfs:subClassOf rdf:resource="#vertical_transfer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#tandem_duplication -->
+
+    <owl:Class rdf:about="#tandem_duplication">
+        <rdfs:subClassOf rdf:resource="#duplication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#vertical_transfer -->
+
+    <owl:Class rdf:about="#vertical_transfer">
+        <rdfs:subClassOf rdf:resource="#reconcilied_event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/phylo/tron/1.0/tron.owl#whole_genome_duplication -->
+
+    <owl:Class rdf:about="#whole_genome_duplication">
+        <rdfs:subClassOf rdf:resource="#duplication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+
